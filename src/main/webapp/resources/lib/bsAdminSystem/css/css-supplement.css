@@ -1,0 +1,128 @@
+body,html{
+    height: 100%;
+}
+
+.fnbtn-container .fnbtn{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.fnbtn-container .fna{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.fna{
+    margin-bottom: 5px;
+    color: #445ef5;
+    background-color: #dde1f5;
+    padding: 12px 15px;
+    border-radius: 4px;
+}
+
+.fn-box .layui-btn{
+    color: #445ef5;
+    background-color: #dde1f5;
+}
+/**hack**/
+.fullmain-hack{
+    height: 80%;
+    margin-left: 4%;
+    margin-right:5%;
+    /*margin-top: 50px;*/
+    background-color: #FFFFFF;
+    padding-left: 30px;
+    width: 90%;
+}
+.main-title{
+    color: gray;
+    font-size: 18px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+.fn-box .hack-btn{
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #3260FC;
+    color: white;
+    border-radius: 8px;
+}
+
+.layui-inline .fn-box{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.layui-border-box{
+    border: none;
+    margin-right: 30px;
+}
+
+.layui-table-body{
+    overflow: hidden;
+}
+.layui-table-page{
+    border-top: none;
+}
+.layui-table thead tr{
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #ffffff;
+    border-top: 1px solid #e6e6e6;
+}
+.layui-table-header th{
+
+}
+
+.layui-table-view .layui-table td {
+
+}
+.layui-table-view .layui-table th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 1px;
+    border-right: none;
+}
+.layui-table-header{
+    background-color: #FFFFFF;
+}
+.layui-table-view .layui-table{
+    /*background: gray;*/
+}
+
+.lay-ignore{
+    display: none;
+}
+
+/*弹窗中确定，取消按钮*/
+.operate-okBtn{
+    background: #3260FC;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.operate-cancelBtn{
+    background: #C3C6CE;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.table-aLable-normal{
+    font-size: 14px;
+    padding: 0px 5px;
+    color:#526ef5;
+}
+
+.table-aLable-warm{
+    font-size: 14px;
+    padding: 0px 5px;
+    color:#FF5722;
+}
+
+
+

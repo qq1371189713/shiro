@@ -1,0 +1,464 @@
+body,html{    
+    word-break: break-all;
+    min-width: 1024px;
+    margin: 0;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}
+#react-wraper {
+    min-height: calc(100vh - 68px);
+}
+#header.login-header {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+#header {
+    background-color: #111c2e;
+    color: #9899A1;
+}
+
+#container.login-container {
+    padding: 0;
+    background:url(img/bg.png);
+    background-size: 100% 100%;
+}
+
+#container {
+    background-color: #fff;
+}
+.login-container, .register-container {
+    position: relative;
+    min-height: 700px;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+#container.login-container .container {
+    max-width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+}
+
+#header>.container, #container>.container {
+    max-width: calc(100vw - 40px);
+}
+#container>.container {
+    /*min-height: calc(100vh - 168px);*/
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.login-title {
+    position: relative;
+    width: 500px;
+    height: 49px;
+    margin: 0 auto;
+    padding-top: 154px;
+    
+}
+form.login-form {
+    width: 400px;
+    margin: 0 auto;
+    margin-left: -50%;
+    margin-top: -60%;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0;
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-color: threedface;
+    border-image: initial;
+}
+#container.login-container .login-form .form-group {
+    position: relative;
+    height: 75px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.form-group {
+    overflow: hidden;
+}
+#container.login-container .login-form .control-label {
+    position: absolute;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    z-index: 1;
+}
+
+a, area, button, [role=button], input:not([type=range]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+label {
+    cursor: default;
+}
+#container.login-container .login-form .form-group .icon {
+    color: rgb(171,178,190,0.92);
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+[class^=icon-], [class*=" icon-"] {
+    font-family: icoiot!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class^=icon-], [class*=" icon-"] {
+    font-family: icoiot!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+#container.login-container .login-form .control-label {
+    position: absolute;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    z-index: 1;
+}
+#container.login-container .login-form .form-control {
+    padding: 10px 50px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 40px;
+}
+
+a, area, button, [role=button], input:not([type=range]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+input[type=text], input[type=password], input[type=number], textarea {
+    -webkit-appearance: none;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #cfcfcf;
+    border-radius: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+input {
+    opacity: .99;
+}
+input {
+    opacity: .99;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(254, 247, 224) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+input {
+    padding: 1px 0px;
+}
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+#container.login-container .login-form .form-group {
+    position: relative;
+    height: 75px;
+}
+
+#container.login-container .valid-group {
+    position: relative;
+}
+.form-group {
+    overflow: hidden;
+}
+#container.login-container .valid-group input {
+    width: 75%;
+}
+#container.login-container .valid-group .valid-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 40px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+#container.login-container .valid-group .valid-text {
+    color: #fff;
+    text-align: right;
+    line-height: 30px;
+    cursor: pointer;
+    float: right;
+}
+
+a, area, button, [role=button], input:not([type=range]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+a {
+    color: #0039aa;
+    background-color: transparent;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    -webkit-text-decoration-skip: objects;
+}
+#container.login-container .login-form .form-group.btn-group {
+    height: 50px;
+}
+
+#container.login-container .login-form .form-group {
+    position: relative;
+    height: 75px;
+}
+#container.login-container .login-form .form-group .login-btn {
+    height: 45px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-color: transparent;
+}
+
+.ant-col-24 {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+.ant-col-1, .ant-col-2, .ant-col-3, .ant-col-4, .ant-col-5, .ant-col-6, .ant-col-7, .ant-col-8, .ant-col-9, .ant-col-10, .ant-col-11, .ant-col-12, .ant-col-13, .ant-col-14, .ant-col-15, .ant-col-16, .ant-col-17, .ant-col-18, .ant-col-19, .ant-col-20, .ant-col-21, .ant-col-22, .ant-col-23, .ant-col-24 {
+    float: left;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+#container.login-container .login-form .form-group .login-btn {
+    height: 45px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-color: transparent;
+}
+
+.ant-btn-primary {
+    color: #fff;
+    background-color: #0039aa;
+    border-color: #0039aa;
+}
+.ant-btn {
+    line-height: 1.5;
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 0;
+    height: 32px;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-transition: all .3s cubic-bezier(0.645,.045,.355,1);
+    transition: all .3s cubic-bezier(0.645,.045,.355,1);
+    position: relative;
+    color: #FFFFFF;
+    background-color: #f7f7f7;
+    border-color: #e6e6e6;
+}
+button, select {
+    text-transform: none;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+#container.login-container .forget-link {
+    text-align: right;
+}
+.logo{
+	/* background: url(img/logo.png); */
+    background: url(img/logo_1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 43px;
+    width: 300px;
+    margin: 0 auto 20px;
+}
+.login-wrap{
+	background: #FFFFFF;
+	border-radius: 10px;
+	padding-top: 60px;
+}
+.fieldset{
+	padding-top: 10px;
+}
+.ant-btn{
+	background: #1783f0;
+	border-radius: 40px;
+	color: #FFFFF;
+}
+.ant-btn span{
+	color: #FFFFF;
+}
+
+input:focus,button:focus{ 
+	outline:none;   //去除高亮直角边框
+	box-shadow:0 0 0 1.5px #f7941d;    //设置圆角边框 
+}
+button:hover{
+	background: #5DA7F0;
+}
+
+
+
+/**
+ * Checkbox Four
+ */
+.checkboxFour {
+	width: 19px;
+	height: 19px;
+}
+/**
+ * Create the checkbox button
+ */
+.checkboxFour label {
+	display: block;
+	width: 19px;
+	height: 19px;
+	float: left;
+	cursor: pointer;
+	z-index: 1;
+ 
+	background: url(img/pop-up_checkbox_n.png);
+	background-size:contain;
+}
+/**
+ * Create the checked state
+ */
+.checkboxFour input[type=checkbox]:checked + label {
+	background: url(img/pop-up_checkbox_y.png);
+	background-size:contain;
+}

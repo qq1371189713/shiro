@@ -1,0 +1,228 @@
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.livetest-bodyer {
+  padding: 15px 20px;
+}
+
+.livetest-tabhead {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f6f9fd;
+}
+.livetest-tabhead li {
+  position: relative;
+  float: left;
+  margin-left: 25px;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.livetest-tabhead li:first-child {
+  margin-left: 0;
+}
+.livetest-tabhead li.cur {
+  color: #ffffff;
+  background: #70a6e5;
+}
+.livetest-tabhead li.cur .close-btn {
+  display: block;
+}
+.livetest-tabhead li .close-btn {
+  display: none;
+  position: absolute;
+  top: -5px;
+  right: -25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: url(../images/close-btn.png) no-repeat center #70a6e5;
+  cursor: pointer;
+}
+
+.livetest-tabbody {
+  margin-top: 30px;
+}
+
+.livetest-list .livetest-list-item {
+  margin-bottom: 30px;
+  float: left;
+  width: 33.33%;
+}
+
+.live-box {
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  width: 85%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px rgba(149, 191, 235, 0.3);
+  background-color: #ffffff;
+}
+.live-box .live-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url(../images/onoutline-icon.png) no-repeat;
+}
+.live-box.on .live-status {
+  background-position: 0 0;
+}
+.live-box.off .live-status {
+  background-position: 0 -60px;
+}
+.live-box.off .playbtn-box .play-btn {
+  color: #d1d1d1;
+  cursor: auto;
+}
+.live-box .live-imgbox {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56%;
+  border-radius: 5px;
+}
+.live-box .live-imgcont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.live-box .live-imgcont img {
+  width: 100%;
+  height: 100%;
+}
+.live-box .playbtn-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.live-box .playbtn-box .play-btn {
+  display: inline-block;
+  margin-top: 20%;
+  padding: 10px 45px;
+  font-size: 14px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.live-box .live-infobox {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.liveplay-box .liveplay-mainbox {
+  margin: auto;
+  padding: 35px;
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px rgba(149, 191, 235, 0.3);
+}
+.liveplay-box .liveplay-imei {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.liveplay-box .liveplay-djs {
+  display: none;
+}
+.liveplay-box .liveplay-videobox {
+  position: relative;
+  padding-top: 56%;
+}
+.liveplay-box .liveplay-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+}
+.liveplay-box .liveplay-ctrl {
+  padding: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  background: #000000;
+  line-height: 28px;
+}
+.liveplay-box .liveplay-ctrl .conversion-icon {
+  float: right;
+  width: 34px;
+  height: 28px;
+  background: url(../images/conversion-icon.png) no-repeat center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) and (min-width: 640px) {
+  .livetest-list .livetest-list-item {
+    width: 50%;
+  }
+
+  .liveplay-box .liveplay-mainbox {
+    width: 80%;
+  }
+
+  .header {
+    padding: 10px 30px;
+    height: auto;
+  }
+  .header .logo {
+    float: none;
+    margin: auto;
+    width: 340px;
+    text-align: center;
+  }
+  .header .logo h1 {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .livetest-bodyer {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .livetest-list .livetest-list-item {
+    width: 100%;
+  }
+
+  .liveplay-box .liveplay-mainbox {
+    width: 100%;
+  }
+
+  .header {
+    padding: 5px 10px;
+    height: auto;
+  }
+  .header .logo {
+    float: none;
+    text-align: center;
+  }
+  .header .logo img {
+    float: none;
+  }
+  .header .logo h1 {
+    float: none;
+    font-size: 18px;
+  }
+
+  .livetest-bodyer {
+    padding: 10px 10px;
+  }
+}
+.liveplay-video .broadsenseLive-camera-state {
+  display: none !important;
+}
+
+/*# sourceMappingURL=vehicle-live.css.map */

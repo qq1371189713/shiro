@@ -1,0 +1,282 @@
+@CHARSET "UTF-8";
+@font-face {
+	font-family: PingFang-SC-Regular;
+    src: url('../lib/font/PINGFANG LIGHT_0.TTF') format('truetype');
+    font-weight: normal;
+    font-stretch: normal;
+}
+
+html, body{
+	width: 100%;
+   	height: 100%;
+}
+#container {
+  width: 65%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.task-no-loc-box::-webkit-scrollbar {
+	width: 3px;
+}
+.task-no-loc-box::-webkit-scrollbar-thumb{
+	border-radius:10px;
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	background:#BABDB6
+}
+.task-no-loc-box {
+	position: absolute;
+	top: 2%;
+	right: 36%;
+	bottom: 2%;
+	overflow: auto;
+	width: 36px;
+	z-index: 99;
+}
+.task-no-loc-box .item {
+	background: url(/resources/images/jeeves/icon_unknow.png) no-repeat;
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	background-color: rgba(190, 190, 190, 0.8);
+	background-repeat: no-repeat;
+	background-size: 70% 70%;
+	background-position: 50% 50%;
+}
+.task-no-loc-box .jeeves {
+	background-image: url(/resources/images/jeeves/icon_build.png);
+}
+.task-no-loc-box .closed {
+	background-image: url(/resources/images/jeeves/icon_seal.png);
+}
+.task-no-loc-box .warn {
+	background-image: url(/resources/images/jeeves/04.gif);
+}
+.search-box {
+	position: absolute;
+	width: 65%;
+}
+.search-box .layui-form-item {
+	margin: 10px 0 0 2%;
+}
+.search-box .layui-form-item .layui-input-inline {
+	margin-top: 5px;
+}
+.right-panel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 65%;
+	background-color: #fff;
+	padding: 15px 20px 5px;
+}
+.right-panel .content-box {
+	height: 50%;
+	width: 100%;
+}
+.right-panel .content-box .header {
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+.right-panel .content-box .header .title {
+	font: bold 18px PingFang-SC-Regular;
+	color: #6d6f79;
+	line-height: 38px;
+}
+.right-panel .content-box .header .task {
+	background: url(/resources/images/jeeves/index/icon_task.png) no-repeat;
+    background-position: 0 45%;
+    padding-left: 35px;
+}
+.right-panel .content-box .header .warn {
+	background: url(/resources/images/jeeves/index/icon_information.png) no-repeat;
+    background-position: 0 50%;
+    padding-left: 35px;
+}
+.right-panel .left {
+	float: left;
+}
+.right-panel .right {
+	float: right;
+}
+.right-panel .content-box .header .tab-box {
+	border: 2px solid #e7edf3;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.right-panel .content-box .header .tab-box > div {
+	min-width: 50px;
+	width: 60px;
+	width: 4vw;
+	height: 100%;
+	text-align: center;
+	cursor: pointer;
+	color: #aaaaaa;
+	font: bold 14px PingFang-SC-Regular;
+	line-height: 34px;
+}
+.right-panel .content-box .header .tab-box .active {
+	background-color: rgb(75, 163, 254);
+	color: #ffffff;
+}
+.right-panel .content-box .tbody {
+	height: 85%;
+	height: calc( 100% - 93px );
+	overflow: auto;
+}
+.right-panel .content-box .tbody .table-row {
+	position: relative;
+	border-bottom: 1px solid #f1efef;
+	padding: 10px 0;
+	overflow: hidden;
+	font: bold 14px PingFang-SC-Regular;
+	display: flex;
+	align-items: center;
+}
+.right-panel .content-box .tbody .table-row:hover {
+	box-shadow:rgb(234, 234, 234) 0px 0px 18px inset;
+}
+.right-panel .content-box .tbody p.load {
+	padding-top: 8px;
+	text-align: center;
+	color: rgb(153, 153, 153);
+}
+.right-panel .content-box .tbody .no-data-box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.right-panel .content-box .tbody .no-data-box .no-data {
+	width: 23%;
+	padding-top: 20.6%;
+	margin: 0 auto;
+	max-height: 100%;
+	background: url(../../../resources/images/none.png) no-repeat;
+	background-size: 100% 100%;
+}
+.right-panel .content-box .tbody .table-row .icon {
+	width: 36px;
+	height: 36px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.right-panel .content-box .tbody .table-row .on {
+	background-image: url(../../../resources/images/jeeves/index/line.png);
+}
+.right-panel .content-box .tbody .table-row .off {
+	background-image: url(../../../resources/images/jeeves/index/off.png);
+}
+.right-panel .content-box .tbody .table-row .tips {
+	width: 60px;
+	height: 32px;
+	border-radius: 5px;
+	text-align: center;
+	font: bold 14px PingFang-SC-Regular;
+	line-height: 32px;
+}
+.right-panel .content-box .tbody .table-row .warn {
+	color: #ffcbcb;
+	background-color: #ec2b2b;
+}
+.right-panel .content-box .tbody .table-row .free {
+	color: #929292;
+	background-color: #E6E6E6;
+}
+.right-panel .content-box .tbody .table-row .road {
+	text-overflow: ellipsis;
+}
+.right-panel .content-box .tbody .table-row .line {
+	margin-left: 20px;
+	color: #232323;
+	font-size: 16px;
+	width: 75%;
+}
+.right-panel .task-box .tbody .table-row .line {
+	width: calc(100% - 106px);
+}
+.right-panel .warn-box .tbody .table-row .line {
+	width: calc(100% - 125px);
+}
+.right-panel .content-box .tbody .table-row .operation {
+	width: 70px;
+}
+.right-panel .content-box .tbody .table-row .line > p:nth-child(n+2) {
+	margin-top: 5px;
+	color: #949494;
+	font-size: 12px;
+}
+.right-panel .content-box .footbar {
+	height: 28px;
+	width: 100%;
+	padding-bottom: 22px;
+}
+.right-panel .content-box .footbar .btn {
+	width: 28px;
+	height: 28px;
+	background-size: cover;	
+	background-repeat: no-repeat;
+}
+.right-panel .content-box .footbar .btn-p {
+	background-image: url(../../../resources/images/jeeves/index/icon_p.png);
+}
+.right-panel .content-box .footbar .btn-p-dis {
+	background-image: url(../../../resources/images/jeeves/index/icon_p_dis.png);
+	cursor:no-drop;
+}
+.right-panel .content-box .footbar .btn-n {
+	background-image: url(../../../resources/images/jeeves/index/icon_n.png);
+}
+.right-panel .content-box .footbar .btn-n-dis {
+	background-image: url(../../../resources/images/jeeves/index/icon_n_dis.png);
+	cursor:no-drop;
+}
+.right-panel .content-box .footbar * {
+	color: #a6abb5;
+	font: 12px MicrosoftYaHei;
+	line-height: 28px;
+}
+.right-panel .content-box .footbar a.left:nth-child(n+2) {
+	margin-left: 7px;
+}
+.right-panel .content-box .footbar a.page {
+	text-align: center;
+	width: 18px;
+}
+.right-panel .content-box .footbar a.current {
+	color: #445ef5 !important;
+	background-color: #f4f4f4;
+	border-radius: 3px;
+}
+
+.amap-info-contentContainer .amap-info-content {
+	padding: 0;
+}
+.amap-info-contentContainer .amap-info-content .amap-info-close {
+	top: 10px;
+	right: 10px !important;
+}
+.bs-info-box {
+	width: 400px;
+}
+.bs-info-box .bs-title {
+	height: 35px;
+	line-height: 35px;
+	padding: 0 15px;
+	color: #fff;
+}
+.bs-info-box .bs-info-conent {
+	margin: 15px 25px;
+	line-height: 24px;
+}
+.bs-info-box .bs-info-toolbar {
+	margin-top: 10px;
+}
+.bs-info-box a {
+	color: #01AAED;
+	margin-right: 40px;
+}

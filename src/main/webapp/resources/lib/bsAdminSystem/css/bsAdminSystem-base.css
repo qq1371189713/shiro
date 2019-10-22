@@ -1,0 +1,857 @@
+@charset "UTF-8";
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-resizer {
+  background-color: transparent;
+}
+
+.layui-form-select dl dd.layui-this {
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+/*清除浮动*/
+html, body {
+  height: 100%;
+  color: #000000;
+  background-color: #ededed;
+}
+
+.header {
+  position: relative;
+  padding: 0 20px;
+  height: 68px;
+  background-color: #ffffff;
+  z-index: 20;
+  box-shadow: 0 0 24px 2px rgba(26, 26, 26, 0.1);
+}
+.header .logo {
+  float: left;
+  height: 68px;
+  line-height: 68px;
+}
+.header .headermenu-phone-icon {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 26px;
+  height: 20px;
+  background: url(../images/headermenu-phone-icon.png) no-repeat center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .header .logo {
+    width: 300px;
+  }
+  .header .logo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .header .logo {
+    width: 260px;
+  }
+  .header .logo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header .logo {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .header .logo img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .header .headermenu-phone-icon {
+    display: block;
+  }
+  .header .header-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 250px;
+    height: auto;
+    line-height: normal;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    z-index: 305146650;
+  }
+  .header .header-menu .nav-menu, .header .header-menu .usercenter-menu {
+    float: none;
+    height: auto;
+    line-height: 60px;
+  }
+  .header .header-menu .nav-menu ul li, .header .header-menu .usercenter-menu ul li {
+    float: none;
+    height: 60px;
+    line-height: 60px;
+  }
+  .header .header-menu .nav-menu ul li a, .header .header-menu .usercenter-menu ul li a {
+    padding: 0;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 0;
+    border-left: 4px solid #ffffff;
+  }
+  .header .header-menu .nav-menu ul li.child::before, .header .header-menu .usercenter-menu ul li.child::before {
+    top: 25px;
+    right: 25px;
+  }
+  .header .header-menu .nav-menu ul li.child:hover, .header .header-menu .usercenter-menu ul li.child:hover {
+    height: auto;
+  }
+  .header .header-menu .nav-menu ul li:hover a, .header .header-menu .nav-menu ul li.cur a, .header .header-menu .usercenter-menu ul li:hover a, .header .header-menu .usercenter-menu ul li.cur a {
+    border-bottom: 0;
+    border-left-color: #445ef5;
+  }
+  .header .header-menu .nav-menu .child-menu, .header .header-menu .usercenter-menu .child-menu {
+    position: initial;
+    top: initial;
+    left: initial;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .header .header-menu .usercenter-menu {
+    margin: 0;
+    padding: 0;
+  }
+  .header .header-menu .usercenter-menu::before {
+    display: none;
+  }
+
+  .headermenu-query-toggle {
+    display: block !important;
+  }
+}
+.header-menu {
+  float: right;
+}
+.header-menu .nav-menu {
+  float: right;
+  height: 68px;
+  line-height: 68px;
+}
+.header-menu .nav-menu li {
+  position: relative;
+  float: left;
+}
+.header-menu .nav-menu li.child {
+  position: relative;
+}
+.header-menu .nav-menu li.child::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  width: 9px;
+  height: 6px;
+  background: url(../images/header-menu-icon.png) no-repeat;
+}
+.header-menu .nav-menu li.child:hover a {
+  color: #445ef5;
+  border-color: #eceffe;
+  background-color: #eceffe;
+}
+.header-menu .nav-menu li.child:hover.child::before {
+  background-position: 0 -12px;
+}
+.header-menu .nav-menu li.child:hover .child-menu {
+  display: block;
+}
+.header-menu .nav-menu li.child a {
+  padding-right: 25px;
+}
+.header-menu .nav-menu li.cur a {
+  color: #445ef5;
+  border-bottom: 4px solid #445ef5;
+  background-color: #eceffe;
+}
+.header-menu .nav-menu li.cur.child::before {
+  background-position: 0 -6px;
+}
+.header-menu .nav-menu li:hover a {
+  color: #333333;
+}
+.header-menu .nav-menu a {
+  display: block;
+  padding: 0 15px;
+  line-height: 64px;
+  font-size: 14px;
+  color: #333333;
+}
+.header-menu .nav-menu .child-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  width: 180%;
+  background-color: #eceffe;
+  z-index: 305146650;
+}
+.header-menu .nav-menu .child-menu li, .header-menu .nav-menu .child-menu a {
+  float: none;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 0 !important;
+  font-size: 14px;
+  color: #000000 !important;
+}
+.header-menu .nav-menu .child-menu li:hover a, .header-menu .nav-menu .child-menu li.cur a {
+  color: #ffffff !important;
+  background-color: #445ef5;
+}
+.header-menu .usercenter-menu {
+  position: relative;
+  float: right;
+  margin-left: 5px;
+  padding-left: 5px;
+  height: 70px;
+  line-height: 70px;
+}
+.header-menu .usercenter-menu::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -15%;
+  width: 2px;
+  height: 45%;
+  background-color: #dedede;
+}
+.header-menu .usercenter-menu li {
+  position: relative;
+  float: left;
+}
+.header-menu .usercenter-menu li.child {
+  position: relative;
+}
+.header-menu .usercenter-menu li.child::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  width: 9px;
+  height: 6px;
+  background: url(../images/header-menu-icon.png) no-repeat;
+}
+.header-menu .usercenter-menu li.child:hover a {
+  border-color: #eceffe;
+}
+.header-menu .usercenter-menu li.child a {
+  padding-right: 25px;
+}
+.header-menu .usercenter-menu li.cur a {
+  color: #445ef5;
+  border-bottom: 4px solid #445ef5;
+  background-color: #eceffe;
+}
+.header-menu .usercenter-menu li.cur.child::before {
+  background-position: 0 -6px;
+}
+.header-menu .usercenter-menu li:hover a {
+  color: #445ef5;
+  border-bottom: 4px solid #445ef5;
+  background-color: #eceffe;
+}
+.header-menu .usercenter-menu li:hover.child::before {
+  background-position: 0 -12px;
+}
+.header-menu .usercenter-menu li:hover .child-menu {
+  display: block;
+}
+.header-menu .usercenter-menu a {
+  display: block;
+  padding: 0 15px;
+  line-height: 66px;
+  font-size: 15px;
+}
+.header-menu .usercenter-menu .child-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  width: 180%;
+  background-color: #eceffe;
+  z-index: 305146650;
+}
+.header-menu .usercenter-menu .child-menu li, .header-menu .usercenter-menu .child-menu a {
+  float: none;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 0 !important;
+  font-size: 14px;
+  color: #000000 !important;
+}
+.header-menu .usercenter-menu .child-menu li:hover a, .header-menu .usercenter-menu .child-menu li.cur a {
+  color: #ffffff !important;
+  background-color: #445ef5;
+}
+
+.full-bodyer {
+  margin: 35px auto 0;
+  padding: 0 20px;
+  max-width: 1600px;
+  width: auto;
+}
+.full-bodyer .content-box {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.full-bodyer .content-box .title-box {
+  height: 40px;
+}
+.full-bodyer .content-box .headline-box {
+  float: left;
+  width: 50%;
+}
+.full-bodyer .content-box .title {
+  position: relative;
+  font-size: 24px;
+  line-height: 36px;
+}
+.full-bodyer .content-box .title i.qa {
+  position: absolute;
+  margin: 3px 0 0 15px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 100%;
+  font-size: 15px;
+  font-style: normal;
+  color: #ffffff;
+  background-color: #cccccc;
+  cursor: pointer;
+}
+.full-bodyer .content-box .content-mainbox {
+  position: relative;
+  margin-top: 15px;
+  padding-top: 35%;
+}
+.full-bodyer .content-box .content-mainbox .main-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.bsform-box {
+  margin-bottom: 20px;
+}
+.bsform-box .bs-label {
+  font-size: 20px;
+  color: #284ccc;
+}
+.bsform-box .bs-inline {
+  display: inline-block;
+}
+.bsform-box .layui-form-select dl dd.layui-this {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+.bsform-box .layui-form-item {
+  margin: 0;
+}
+.bsform-box .bs-btn {
+  background: #445ef5;
+}
+
+.sidebar-bodyer {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.sidebar-bodyer iframe {
+  width: 100%;
+  height: 100%;
+}
+.sidebar-bodyer.toggleSidebar .sidebar .first-menu span {
+  display: none;
+}
+.sidebar-bodyer.toggleSidebar .sidebar .first-menu li.child::before {
+  display: none;
+}
+.sidebar-bodyer.toggleSidebar .sidebar .first-menu li:hover span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 120px;
+  background: #ffffff;
+}
+.sidebar-bodyer.toggleSidebar .sidebar .first-menu li:hover .second-menu {
+  display: block !important;
+  position: absolute;
+  top: 60px;
+  left: 72px;
+  width: 130px;
+  background: #ffffff;
+}
+.sidebar-bodyer.toggleSidebar .sidebar .first-menu li:hover .second-menu a {
+  padding-left: 12px;
+}
+.sidebar-bodyer.toggleSidebar .sidebar .first-menu li .second-menu {
+  display: none !important;
+}
+.sidebar-bodyer.toggleSidebar .main {
+  margin-left: 72px;
+}
+
+.sidebar {
+  position: relative;
+  float: left;
+  height: 100%;
+  background-color: #ffffff;
+}
+.sidebar #sidebarMenu {
+  position: relative;
+}
+.sidebar .first-menu {
+  height: 100%;
+}
+.sidebar .first-menu > li {
+  position: relative;
+}
+.sidebar .first-menu > li > a {
+  position: relative;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  z-index: 9;
+  border-right: 4px solid #ffffff;
+}
+.sidebar .first-menu > li:hover > a, .sidebar .first-menu > li.cur > a {
+  border-right: 4px solid #445ef5;
+  background-color: #f5f6fa;
+  color: #445ef5;
+}
+.sidebar .first-menu > li.child::before {
+  content: '+';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  font-size: 18px;
+  color: #989ba2;
+  z-index: 10;
+}
+.sidebar .first-menu > li.child:hover::before, .sidebar .first-menu > li.child.cur::before {
+  color: #445ef5;
+}
+.sidebar .first-menu > li.child.toggleSecondmenu::before {
+  content: '-';
+}
+.sidebar .first-menu > li.child.toggleSecondmenu .second-menu {
+  display: block;
+}
+.sidebar .first-menu i {
+  display: block;
+  float: left;
+  width: 68px;
+  height: 60px;
+  /*background: url(../images/sidebar-icon.png) no-repeat;*/
+  background: url(../../../images/newIcon/icon/index/icon.png) no-repeat;
+}
+.sidebar .first-menu i.index {
+  background-position: 0 0;
+}
+.sidebar .first-menu i.history {
+  background-position: 0 -60px;
+}
+.sidebar .first-menu i.live {
+  background-position: 0 -120px;
+}
+.sidebar .first-menu i.OBD {
+  background-position: 0 -180px;
+}
+.sidebar .first-menu i.fence {
+  background-position: 0 -240px;
+}
+.sidebar .first-menu i.remind {
+  background-position: 0 -300px;
+}
+.sidebar .first-menu i.information {
+  background-position: 0 -360px;
+}
+.sidebar .first-menu i.resuce {
+  background-position: 0 -420px;
+}
+.sidebar .first-menu i.overloadwarn {
+  background-position: 0 -480px;
+}
+.sidebar .first-menu i.customerinfor {
+  background-position: 0 -540px;
+}
+.sidebar .first-menu i.vehicleinfo {
+  background-position: 0 -600px;
+}
+.sidebar .first-menu i.vehicleadmin {
+  background-position: 0 -660px;
+}
+.sidebar .first-menu i.vehiclestatus {
+  background-position: 0 -720px;
+}
+.sidebar .first-menu i.fleetmanagement {
+  background-position: 0 -780px;
+}
+.sidebar .first-menu i.getmediafiles {
+  background-position: 0 -840px;
+}
+.sidebar .first-menu i.messageissued {
+  background-position: 0 -900px;
+}
+.sidebar .first-menu i.alarmrulesset {
+  background-position: 0 -960px;
+}
+/*----------------------------------------*/
+.sidebar .first-menu i.newIndex {
+  background-position: 23px 20px;
+}
+
+/*调度管理*/
+.sidebar .first-menu i.controlService {
+  background-position: 23px -84px;
+}
+/*救援信息*/
+.sidebar .first-menu i.rescueService {
+  background-position: 23px -32px;
+}
+/*车辆监控*/
+.sidebar .first-menu i.locationService {
+  background-position: 23px -240px;
+}
+
+.sidebar .first-menu i.vehicleManage {
+  background-position: 23px -292px;
+}
+
+.sidebar .first-menu i.eventReminder {
+  background-position: 23px -136px;
+}
+
+.sidebar .first-menu i.deviceManage {
+  background-position: 23px -340px;
+}
+
+.sidebar .first-menu i.systemManage {
+  background-position: 23px -32px;
+}
+
+.sidebar .first-menu i.costManage {
+  background-position: 23px -188px;
+}
+
+.sidebar .first-menu i.jeevesManage {
+  background-position: 23px -393px;
+}
+
+ .sidebar .first-menu i.deviceManage1 {
+  background-position: 23px -498px;
+} 
+
+.sidebar .first-menu i.warnManage {
+  background-position: 23px -448px;
+}
+
+
+
+/*调度管理*/
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.controlService {
+  background-position: -23px -84px;
+}
+/*救援信息*/
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.rescueService {
+  background-position: -23px -32px;
+}
+/*车辆监控*/
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.locationService {
+  background-position: -23px -240px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.vehicleManage {
+  background-position: -23px -292px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.eventReminder {
+  background-position: -23px -136px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.deviceManage {
+  background-position: -23px -340px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.systemManage {
+  background-position: -23px -32px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.costManage {
+  background-position: -23px -188px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.newIndex {
+  background-position: -23px 20px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.jeevesManage {
+  background-position: -23px -393px;
+}
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.deviceManage1 {
+  background-position: -23px -498px;
+} 
+
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.warnManage {
+  background-position: -23px -448px;
+}
+
+
+
+/*.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.locationService {*/
+  /*background-position: -23px -188px;*/
+/*}*/
+
+/*.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.vehicleManage {*/
+  /*background-position: -23px -240px;*/
+/*}*/
+
+/*.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.eventReminder {*/
+  /*background-position: -23px -84px;*/
+/*}*/
+
+/*.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.deviceManage {*/
+  /*background-position: -23px -288px;*/
+/*}*/
+
+/*.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.systemManage {*/
+  /*background-position: -23px -32px;*/
+/*}*/
+
+/*.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.costManage {*/
+  /*background-position: -23px -136px;*/
+/*}*/
+
+/*----------------------------------------*/
+.sidebar .first-menu li:hover i.index, .sidebar .first-menu li.cur i.index {
+  background-position: -68px 0;
+}
+.sidebar .first-menu li:hover i.history, .sidebar .first-menu li.cur i.history {
+  background-position: -68px -60px;
+}
+.sidebar .first-menu li:hover i.live, .sidebar .first-menu li.cur i.live {
+  background-position: -68px -120px;
+}
+.sidebar .first-menu li:hover i.OBD, .sidebar .first-menu li.cur i.OBD {
+  background-position: -68px -180px;
+}
+.sidebar .first-menu li:hover i.fence, .sidebar .first-menu li.cur i.fence {
+  background-position: -68px -240px;
+}
+.sidebar .first-menu li:hover i.remind, .sidebar .first-menu li.cur i.remind {
+  background-position: -68px -300px;
+}
+.sidebar .first-menu li:hover i.information, .sidebar .first-menu li.cur i.information {
+  background-position: -68px -360px;
+}
+.sidebar .first-menu li:hover i.resuce, .sidebar .first-menu li.cur i.resuce {
+  background-position: -68px -420px;
+}
+.sidebar .first-menu li:hover i.overloadwarn, .sidebar .first-menu li.cur i.overloadwarn {
+  background-position: -68px -480px;
+}
+.sidebar .first-menu li:hover i.customerinfor, .sidebar .first-menu li.cur i.customerinfor {
+  background-position: -68px -540px;
+}
+.sidebar .first-menu li:hover i.vehicleinfo, .sidebar .first-menu li.cur i.vehicleinfo {
+  background-position: -68px -600px;
+}
+.sidebar .first-menu li:hover i.vehicleadmin, .sidebar .first-menu li.cur i.vehicleadmin {
+  background-position: -68px -660px;
+}
+.sidebar .first-menu li:hover i.vehiclestatus, .sidebar .first-menu li.cur i.vehiclestatus {
+  background-position: -68px -720px;
+}
+.sidebar .first-menu li:hover i.fleetmanagement, .sidebar .first-menu li.cur i.fleetmanagement {
+  background-position: -68px -780px;
+}
+.sidebar .first-menu li:hover i.getmediafiles, .sidebar .first-menu li.cur i.getmediafiles {
+  background-position: -68px -840px;
+}
+.sidebar .first-menu li:hover i.messageissued, .sidebar .first-menu li.cur i.messageissued {
+  background-position: -68px -900px;
+}
+.sidebar .first-menu li:hover i.alarmrulesset, .sidebar .first-menu li.cur i.alarmrulesset {
+  background-position: -68px -960px;
+}
+.sidebar .first-menu span {
+  display: block;
+  float: left;
+  padding-left: 10px;
+  width: 144px;
+  font-size: 14px;
+}
+.sidebar .first-menu .message {
+  position: absolute;
+  top: 5px;
+  left: 45px;
+  padding: 2px 5px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #f22052;
+  border-radius: 10px;
+  z-index: 30;
+}
+.sidebar .second-menu {
+  display: none;
+  z-index: 3051;
+}
+.sidebar .second-menu li a {
+  display: block;
+  padding-left: 70px;
+  height: 35px;
+  line-height: 35px;
+}
+.sidebar .second-menu li:hover, .sidebar .second-menu li.cur {
+  border-right: 4px solid #445ef5;
+  background-color: #f5f6fa;
+}
+.sidebar .sidebarbtn-box {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  margin-top: -43px;
+  width: 15px;
+  height: 86px;
+  border-radius: 0 3px 3px 0;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.sidebar .sidebarbtn-box i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 5px;
+  height: 14px;
+  background: url(../images/sidebararr-icon.png) -5px 0;
+}
+.sidebar .sidebarbtn-box.toggleSidebarbtn i {
+  background-position: 0 0;
+}
+
+.main {
+  margin-left: 226px;
+  height: 100%;
+}
+.main iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.fullmain {
+  height: 100%;
+}
+
+/*侧边栏出现滚动条时的样式*/
+.fnbtn {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 4px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.fnbtn i {
+  display: inline-block;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/funcbtn-icon.png?base64) no-repeat;
+  vertical-align: bottom;
+}
+.fnbtn.upload {
+  color: #445ef5;
+  background-color: #dde1f5;
+}
+.fnbtn.upload i {
+  background-position: 0 0;
+}
+.fnbtn.download {
+  color: #445ef5;
+  background-color: #dde1f5;
+}
+.fnbtn.download i {
+  background-position: 0 -20px;
+}
+.fnbtn.clear {
+  color: #ff7069;
+  background-color: #ffd0cd;
+}
+.fnbtn.clear i {
+  background-position: 0 -40px;
+}
+.fnbtn.add {
+  color: #445ef5;
+  background-color: #dde1f5;
+}
+.fnbtn.add i {
+  background-position: 0 -60px;
+}
+.fnbtn.search {
+  color: #445ef5;
+  background-color: #dde1f5;
+}
+.fnbtn.search i {
+  background-position: 0 -80px;
+}
+
+/*# sourceMappingURL=bsAdminSystem-base.css.map */

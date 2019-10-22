@@ -141,7 +141,13 @@
                 /static/** = anon
                 /lib/** = anon
                 /js/** = anon
-
+                /resources/** = anon
+                /lib/** = anon
+                /css/** = anon
+                /images/** = anon
+                /js/** = anon
+                /lib/** = anon
+                /tools/** = anon
                 <!-- 登录页面不拦截 -->
                 /login.jsp = anon
                 /login.do = anon
